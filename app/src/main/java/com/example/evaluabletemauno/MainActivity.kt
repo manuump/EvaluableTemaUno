@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.provider.AlarmClock
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +23,18 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val abrirConfig = findViewById<ImageButton>(R.id.botonConfig)
+        abrirConfig.setOnClickListener {
+            val intent = Intent(this,ConfiguracionActivity::class.java)
+            startActivity(intent)
+        }
+
+        val abrirJuego = findViewById<Button>(R.id.botonJuego)
+        abrirJuego.setOnClickListener {
+            val intent = Intent(this,JuegoActivity::class.java)
+            startActivity(intent)
         }
 
         // Declarar y señalar boton
