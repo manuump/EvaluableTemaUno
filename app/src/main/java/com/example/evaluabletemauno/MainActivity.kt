@@ -37,6 +37,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val abrirChistes: Button = findViewById(R.id.botonChistes)
+
+        abrirChistes.setOnClickListener {
+            val intent = Intent(this, ChistesActivity::class.java)
+            startActivity(intent)
+        }
+
         // Declarar y señalar boton
         val abrirURL = findViewById<Button>(R.id.botonURL)
         // Accion para abrir una URL con un boton
